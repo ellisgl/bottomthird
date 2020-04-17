@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1391"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="logo.svg">
+  <defs
+     id="defs1385">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1404"
+       id="linearGradient1344"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-1.3e-6,-29.10758,-29.10758,1.3e-6,60.923828,102.58398)"
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="0"
+       spreadMethod="pad" />
+    <linearGradient
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-1.3e-6,-29.10758,-29.10758,1.3e-6,60.923828,102.58398)"
+       spreadMethod="pad"
+       id="linearGradient1404">
+      <stop
+         style="stop-opacity:1;stop-color:#ffffff"
+         offset="0"
+         id="stop1400" />
+      <stop
+         style="stop-opacity:1;stop-color:#d5d5d5"
+         offset="1"
+         id="stop1402" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.203125"
+     inkscape:cx="258.28571"
+     inkscape:cy="560"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata1388">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g1388-5"
+       inkscape:export-xdpi="300.008"
+       inkscape:export-ydpi="300.008"
+       transform="matrix(0.60552311,0,0,-0.67985696,2.4736119,227.57022)"
+       inkscape:export-filename="C:\Users\Ellis\www\bottomthird\logo.png">
+      <g
+         id="g1390-8">
+        <g
+           id="g1396-2">
+          <g
+             id="g1398-0">
+            <path
+               d="m 34.707,68.284 h 52.434 v 46.701 H 34.707 Z"
+               style="fill:url(#linearGradient1344);stroke:none"
+               id="path1406-9"
+               inkscape:connector-curvature="0" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <text
+       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.27306747px;font-family:Bebas;-inkscape-font-specification:Bebas;writing-mode:lr-tb;fill:#5d5d5d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.16510034"
+       id="text1742-4"
+       x="24.13875"
+       y="162.29349"
+       inkscape:export-xdpi="300.008"
+       inkscape:export-ydpi="300.008"
+       inkscape:export-filename="C:\Users\Ellis\www\bottomthird\logo.png">
+      <tspan
+         style="stroke-width:1.16510034"
+         sodipodi:role="line"
+         id="tspan1740-8"
+         x="24.13875"
+         y="162.29349">WiFi</tspan>
+    </text>
+    <text
+       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.93333244px;font-family:Bebas;-inkscape-font-specification:Bebas;writing-mode:lr-tb;fill:#5d5d5d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.35277775"
+       id="text1746-9"
+       x="32.927727"
+       y="179.74165"
+       inkscape:export-xdpi="300.008"
+       inkscape:export-ydpi="300.008"
+       inkscape:export-filename="C:\Users\Ellis\www\bottomthird\logo.png">
+      <tspan
+         sodipodi:role="line"
+         id="tspan1744-3"
+         x="32.927727"
+         y="179.74165"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7555542px;font-family:Bebas;-inkscape-font-specification:'Bebas, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.35277775">9</tspan>
+    </text>
+  </g>
+</svg>

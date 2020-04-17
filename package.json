@@ -1,0 +1,10 @@
+{
+    "name": "bottomthird",
+    "version": "1.0.0",
+    "description": "Bottom-Third Thingy for OBS.",
+    "dependencies": {
+        "express": "^4.17.1",
+        "node-ssh": "^8.0.0",
+        "socket.io": "^2.3.0"
+    }
+}

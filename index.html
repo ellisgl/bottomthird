@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The HTML5 Herald</title>
+        <meta name="description" content="The HTML5 Herald">
+        <meta name="author" content="SitePoint">
+        <link rel="stylesheet" href="">
+        <style type="text/css">
+            #container {
+                width: 800px;
+                height: 120px;
+                background-color: red;
+            }
+
+            #logo {
+                width: 120px;
+                height: 120px;
+                float: left;
+                background-image: url('logo.png');
+                background-size: 120px 120px;
+            }
+
+            #rightContainer {
+                width: 680px;
+                height: 120px;
+                float: left;
+                background-color: #242424;
+            }
+
+            #rightTop {
+                width: 680px;
+                height: 80px;
+                position: relative;
+            }
+
+            #rightTopLeft {
+                width: 90px;
+                height: 80px;
+                padding-left: 10px;
+                float: left;
+            }
+
+            #rightTopLeftContent {
+                color: #FFF;
+                font-family: monospace;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            #rightTopRight {
+                width: 575px;
+                height: 80px;
+                float: left;
+            }
+
+            #rightTopRightContent {
+                width: 575px;
+                color: #F00;
+                font-size: 60px;
+                font-family: cursive;
+            }
+
+            #rightBottom {
+                width: 680px;
+                height: 40px;
+                position: relative;
+            }
+
+            #rightBottomLeft {
+                width: 50px;
+                height: 40px;
+                padding-left: 10px;
+                float: left;
+            }
+
+            #rightBottomLeftContent {
+                color: #FFF;
+                font-family: monospace;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            #rightBottomCenter {
+                width: 0;
+                height: 0;
+                float:left;
+                border-top: 20px solid #242424;
+                border-left: 20px solid #242424;
+                border-bottom: 20px solid #FFF;
+                border-right:  20px solid #FFF;
+            }
+
+            #rightBottomRight {
+                height: 40px;
+                width: 580px;
+                float:left;
+                background-color: #FFF;
+            }
+
+            #rightBottomRightContent {
+                color: #000;
+                font-family: monospace;
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            .vertical-center {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="logo">
+            </div>
+            <div id="rightContainer">
+                <div id="rightTop">
+                    <div id="rightTopLeft">
+                        <div id="rightTopLeftContent" class="vertical-center"></div>
+                    </div>
+                    <div id="rightTopRight">
+                        <div id="rightTopRightContent" class="vertical-center">BREAKING NEWS</div>
+                    </div>
+                </div>
+                <div id="rightBottom">
+                    <div id="rightBottomLeft">
+                        <div id="rightBottomLeftContent" class="vertical-center"></div>
+                    </div>
+                    <div id="rightBottomCenter"></div>
+                    <div id="rightBottomRight">
+                        <div id="rightBottomRightContent" class="vertical-center"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            const socket = io();
+            const rightTopLeftContent = document.getElementById('rightTopLeftContent');
+            const rightBottomLeftContent = document.getElementById('rightBottomLeftContent');
+            const rightBottomRightContent = document.getElementById('rightBottomRightContent');
+
+            let rx;
+            let tx;
+
+            function formatBytes(bytes, decimals = 2) {
+                if (bytes === 0) return '0 Bytes';
+
+                const k = 1024;
+                const dm = decimals < 0 ? 0 : decimals;
+                const sizes = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+
+                return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+            }
+
+            (function() {
+                socket.on('bandwidth', function(data) {
+                    if (data.rx[1] > data.rx[0]) {
+                        rx = formatBytes(data.rx[1] -  data.rx[0], 0);
+                    } else {
+                        rx = formatBytes(data.rx[0] -  data.rx[1], 0);
+                    }
+
+                    if (data.rx[1] > data.rx[0]) {
+                        tx = formatBytes(data.tx[1] -  data.tx[0], 0);
+                    } else {
+                        tx = formatBytes(data.tx[0] -  data.tx[1], 0);
+                    }
+
+                    rightTopLeftContent.innerHTML = 'T: ' + tx + '<br>R: ' + rx;
+                });
+
+                socket.on('headline', function (headline) {
+                    rightBottomRightContent.innerHTML = headline;
+                });
+
+                socket.on('temp', function(temp) {
+                    rightBottomLeftContent.innerHTML = temp;
+                });
+            })();
+
+        </script>
+    </body>
+</html>
