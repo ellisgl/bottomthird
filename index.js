@@ -10,7 +10,7 @@ let headLines     = [
     'ARE YOU A BART OR A MILHOUSE?',
     'BUMBLEBEE MAN CAUGHT IN STING',
     'Ketchup Truck Hits Hamburger Stand',
-    'Prendsident, Rock Star To Swap Wives',
+    'President, Rock Star To Swap Wives',
     'SPINNING NEWS PAPER INJURES PRINTER',
     'YOU NEED A HEART TO LIVE',
     'Devs sit down at the Stand Up.'
