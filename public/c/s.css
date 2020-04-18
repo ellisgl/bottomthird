@@ -1,0 +1,105 @@
+#container {
+    width: 800px;
+    height: 120px;
+    background-color: red;
+}
+
+#logo {
+    width: 120px;
+    height: 120px;
+    float: left;
+    background-image: url('public/i/logo.png');
+    background-size: 120px 120px;
+}
+
+#rightContainer {
+    width: 680px;
+    height: 120px;
+    float: left;
+    background-color: #242424;
+}
+
+#rightTop {
+    width: 680px;
+    height: 80px;
+    position: relative;
+}
+
+#rightTopLeft {
+    width: 90px;
+    height: 80px;
+    padding-left: 10px;
+    float: left;
+}
+
+#rightTopLeftContent {
+    color: #FFF;
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#rightTopRight {
+    width: 575px;
+    height: 80px;
+    float: left;
+}
+
+#rightTopRightContent {
+    width: 575px;
+    color: #F00;
+    font-size: 60px;
+    font-family: cursive;
+}
+
+#rightBottom {
+    width: 680px;
+    height: 40px;
+    position: relative;
+}
+
+#rightBottomLeft {
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    float: left;
+}
+
+#rightBottomLeftContent {
+    color: #FFF;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#rightBottomCenter {
+    width: 0;
+    height: 0;
+    float:left;
+    border-top: 20px solid #242424;
+    border-left: 20px solid #242424;
+    border-bottom: 20px solid #FFF;
+    border-right:  20px solid #FFF;
+}
+
+#rightBottomRight {
+    height: 40px;
+    width: 580px;
+    float:left;
+    background-color: #FFF;
+}
+
+#rightBottomRightContent {
+    color: #000;
+    font-family: monospace;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
