@@ -1,3 +1,4 @@
+'use strict';
 const app      = require('express')();
 const http     = require('http').createServer(app);
 const node_ssh = require('node-ssh');
