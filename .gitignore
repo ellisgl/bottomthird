@@ -1,2 +1,4 @@
 .idea
 node_modules
+config/app.js
+config/router.js
