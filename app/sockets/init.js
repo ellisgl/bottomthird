@@ -17,18 +17,22 @@ let temp          = '0';
 function initSocket(app, io, ssh) {
     // Get and transmit router rx/tx of WAN port.
     function getBandWidth() {
-        ssh.execCommand('cat /proc/net/dev|grep eth0').then(function (result) {
-            if (result.stdout) {
-                let res = result.stdout.replace(/  +/g, ' ').split(' ');
-                // Add to the back of the stack, and remove the 1st item. Also divide by 8 (bits to bytes?)
-                bandwidth.rx.push(res[1] / 8);
-                bandwidth.rx.shift();
-                bandwidth.tx.push(res[9] / 8);
-                bandwidth.tx.shift();
+        ssh.execCommand('cat /proc/net/dev|grep eth0')
+           .then(function (result) {
+               if (result.stdout) {
+                   let res = result.stdout.replace(/  +/g, ' ').split(' ');
+                   // Add to the back of the stack, and remove the 1st item. Also divide by 8 (bits to bytes?)
+                   bandwidth.rx.push(res[1] / 8);
+                   bandwidth.rx.shift();
+                   bandwidth.tx.push(res[9] / 8);
+                   bandwidth.tx.shift();
 
-                io.emit('bandwidth', bandwidth);
-            }
-        });
+                   io.emit('bandwidth', bandwidth);
+               }
+           })
+           .catch((error) => {
+               console.error(error);
+           });
     }
 
     // Transmit and cycle through headlines.
@@ -44,12 +48,16 @@ function initSocket(app, io, ssh) {
 
     // Get and transmit the router CPU temperature.
     function getTemp() {
-        ssh.execCommand('cat /proc/dmu/temperature').then(function (result) {
-            if (result.stdout) {
-                temp = result.stdout.split("\t:")[1].split("�")[0].trim();
-                io.emit('temp', temp + '°');
-            }
-        });
+        ssh.execCommand('cat /proc/dmu/temperature')
+           .then(function (result) {
+               if (result.stdout) {
+                   temp = result.stdout.split("\t:")[1].split("�")[0].trim();
+                   io.emit('temp', temp + '°');
+               }
+           })
+           .catch((error) => {
+               console.error(error);
+           });
     }
 
     // Get and transmit the initial temp. Set to 1 second to allow for SSH to connect.

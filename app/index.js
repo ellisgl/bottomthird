@@ -13,12 +13,15 @@ ssh.connect(
     {
         host: process.env.ROUTER_HOST || config.router.host,
         username: process.env.ROUTER_USER || config.router.user,
-        password: process.env.ROUTER_PASS ||config.router.pass
+        password: process.env.ROUTER_PASS || config.router.pass
     })
    .then(function () {
              console.log('Connected to router.');
          }
-   );
+   )
+   .catch((error) => {
+       console.error(error);
+   });
 
 // Setup Express.JS
 app.use(express.static('public'));
