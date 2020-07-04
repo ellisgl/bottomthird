@@ -3,6 +3,7 @@
 const config   = require('../config');
 const express  = require('express');
 const app      = express();
+//  deepcode ignore HttpToHttps: This isn't something run a production box and is for fun. Why make certs in this case?
 const http     = require('http').createServer(app);
 const io       = require('socket.io')(http);
 const node_ssh = require('node-ssh');
