@@ -7,6 +7,6 @@
         "express": "^4.17.2",
         "node-ssh": "^12.0.2",
         "socket.io": "^3.1.2",
-        "utf-8-validate": "^5.0.7"
+        "utf-8-validate": "^5.0.8"
     }
 }
