@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Bottom-Third Thingy for OBS.",
     "dependencies": {
-        "bufferutil": "^4.0.9",
+        "bufferutil": "^4.1.0",
         "express": "^4.22.1",
         "node-ssh": "^12.0.5",
         "socket.io": "^4.8.1",
