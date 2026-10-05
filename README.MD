@@ -9,4 +9,4 @@ Optional Environment Variables (can be set in config):
 * PORT - Which port to listen to.
 * ROUTER_HOST - Router IP / FQDN.
 * ROUTER_USER - The router SSH username.
-* ROUTER_PASS - The routter SSH password. (Yeah, not using keys in this example.)
+* ROUTER_PASS - The router SSH password. (Yeah, it's not using keys in this example.)
